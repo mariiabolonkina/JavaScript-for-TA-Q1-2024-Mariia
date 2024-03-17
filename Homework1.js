@@ -5,7 +5,7 @@
 // let serverName = "DXEServerMachine";
 // let workstationName = "DXEWorkstationMachine";
 // console.log(serverName,workstationName);
-// serverName = workstationName
+// serverName = workstationName;
 // console.log(serverName,workstationName);
 
 //Task4
@@ -36,7 +36,7 @@
 
 // console.log(birthday,marriedStatus,firstName,lastName,group);
 
-// let data1 = null
+// let data1 = null;
 // console.log(typeof data1);
 // let data2;
 // console.log(typeof data2);
