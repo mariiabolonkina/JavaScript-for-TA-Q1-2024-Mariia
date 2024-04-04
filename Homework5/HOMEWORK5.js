@@ -67,75 +67,63 @@
 // console.log(student1.showCourse());
 
 //task4
-// const workerList = [];
-
 // class Worker {
-//     #experiance = 1.2;
-
-//         constructor(fullName , dayRate, workingDays){
-//             this.fullName  = fullName ;
-//             this.dayRate = dayRate;
-//             this. workingDays = workingDays;
-//             workerList.push(this);
-//         }
-//             showSalary() { 
-//     console.log(`${this.fullName} salary: ${this.dayRate * this.workingDays}`);
-// }  
-// showSalaryWithExperience() { 
-//     console.log(`${this.fullName} salary: ${this.dayRate * this.workingDays * this.#experiance}`); 
-// }
-// showSalaryWorker() {
-//     return `${this.dayRate * this.workingDays * this.#experiance}`;
-// }
-// get showExp(){
-//     return this.#experiance;
-// }
-// set setExp(experiance){
-//     this.#experiance = experiance;
-// }
-
-// sortSalaries(workersArray){ 
-//     let sortedSalaries = workersArray.sort(function(a,b){
-//         return a.showSalaryWorker() - b.showSalaryWorker();
-//     })
-//     // console.log(sortedSalaries);
-//     for (let i = 0; i < sortedSalaries.length; i++){
-//         console.log(sortedSalaries[i].fullName + ":" + sortedSalaries[i].showSalaryWorker());
+//         #experience = 1.2;
+//         constructor(fullName, dayRate, workingDays) {
+//                 this.fullName = fullName;
+//                 this.dayRate = dayRate;
+//                 this.workingDays = workingDays;
+//             }
+//             showSalary() {
+//                 return this.fullName + ": " + this.dayRate * this.workingDays;
+//             }        
+    
+//             showSalaryWithExperiences() {
+//                 return Number((this.dayRate * this.workingDays * this.#experience).toFixed(2));
+//             }
+    
+//             set setExp (newExperience) {
+//                 if (newExperience < 0) throw new Error ("Experience not enough");
+//                 this.#experience = newExperience;
+//             }
+//             get getExp () {
+//                 return this.#experience;
+//             }
 //     }
-// }
-// }
-
-// let worker1 = new Worker("John Johnson", 20, 23);
-// console.log(worker1.fullName);                 
-// worker1.showSalary();
-// console.log("New experience: " + worker1.showExp);
-// worker1.showSalaryWithExperience();
-// worker1.setExp = 1.5;
-// console.log("New experience: " + worker1.showExp);
-// worker1.showSalaryWithExperience();
-// console.log("------------------")
-
-// let worker2 = new Worker("Tom Tomson", 48, 22);
-// console.log(worker1.fullName);                 
-// worker2.showSalary();
-// console.log("New experience: " + worker2.showExp);
-// worker2.showSalaryWithExperience();
-// worker2.setExp = 1.5;
-// console.log("New experience: " + worker2.showExp);
-// worker2.showSalaryWithExperience();
-// console.log("------------------")
-
-// let worker2 = new Worker("Andy Ander", 29, 23);
-// console.log(worker1.fullName);                 
-// worker2.showSalary();
-// console.log("New experience: " + worker2.showExp);
-// worker2.showSalaryWithExperience();
-// worker2.setExp = 1.5;
-// console.log("New experience: " + worker2.showExp);
-// worker2.showSalaryWithExperience();
-// console.log("------------------")
-
-// worker1.sortSalaries(workerList);
+//     // dynamic sorting by salary
+    
+//     function sortSalary (workers) {
+            
+//         return workers
+//            .sort((a,b) => a.showSalaryWithExperiences() - b.showSalaryWithExperiences())
+//            .map(worker => {
+//                return {name: worker.fullName, salary: worker.showSalaryWithExperiences()}});
+//        }
+    
+    
+//         let worker1 = new Worker ("John Johnson", 45, 20);
+//         let worker2 = new Worker ("Tom Tomson", 22, 15);
+//         let worker3 = new Worker ("Andy Ander", 20, 105);
+    
+//         console.log(worker1.fullName)
+//         console.log(worker1.showSalary());
+//         console.log("experience value: " + worker1.getExp);
+//         console.log("Salary with experience value: " + worker1.showSalaryWithExperiences());
+//         worker1.setExp = 1.5;
+//         console.log("experience value: " + worker1.getExp);
+//         console.log("Salary with experience value: " + worker1.showSalaryWithExperiences());
+    
+//         console.log(worker2.fullName)
+//         worker2.setExp = 3.5;
+//         console.log("experience value: " + worker2.getExp);
+//         console.log("Salary with experience value: " + worker2.showSalaryWithExperiences());
+    
+//         console.log(worker3.fullName)
+//         worker3.setExp = 2.5;
+//         console.log("experience value: " + worker3.getExp);
+//         console.log("Salary with experience value: " + worker3.showSalaryWithExperiences());
+    
+//         console.log (sortSalary([worker1, worker2, worker3]));
 
 //task5
 // class GeometricFigure {
