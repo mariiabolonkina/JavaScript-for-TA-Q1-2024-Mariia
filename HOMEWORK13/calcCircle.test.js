@@ -1,9 +1,9 @@
 const {getCircleLength} = require('./calcCircle');
 const {getCircleArea} = require('./calcCircle');
 
-xdescribe("GetCircleLength function", () => {
+describe("GetCircleLength function", () => {
     test('When circle radius is 22 the circle length is equal to 138.2', () => {
-        expect(getCircleLength(22)).toBeCloseTo(138.2);
+        expect(getCircleLength(22)).toBe(138.2);
     });
 });
 
